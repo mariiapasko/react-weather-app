@@ -4,11 +4,13 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      Weather app
+      <div className="container">
+      <h1>Weather app</h1>
       <footer>
         This project is coded by Mariia Pasko and {" "}
-        <a href="https://github.com/mariiapasko/react-weather-app" target="_blank"> open-sourced on GitHub</a>
+        <a href="https://github.com/mariiapasko/react-weather-app"> open-sourced on GitHub</a>
       </footer>
+      </div>
     </div>
   );
 }
