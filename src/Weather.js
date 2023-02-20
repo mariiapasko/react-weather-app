@@ -13,7 +13,7 @@ export default function Weather(props) {
             ready: true,
             temperature: response.data.main.temp,
             date: new Date(response.data.dt * 1000),
-            iconUrl:" ",
+            iconUrl:`http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
             wind: response.data.wind.speed,
             city: response.data.name,
             humidity: response.data.main.humidity,
