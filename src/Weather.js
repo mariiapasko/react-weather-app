@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
+import WeatherIcon from "./WeatherIcon";
 
-import WeatherInfo from "./Weatherinfo";
+
 export default function Weather(props) {
     
     const [weatherData, setWeatherData] = useState({ready: false});
@@ -13,7 +16,7 @@ export default function Weather(props) {
             ready: true,
             temperature: response.data.main.temp,
             date: new Date(response.data.dt * 1000),
-            iconUrl:`http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
+            icon: response.data.weather[0].icon,
             wind: response.data.wind.speed,
             city: response.data.name,
             humidity: response.data.main.humidity,
@@ -54,12 +57,14 @@ setCity(event.target.value);
                 </div>
                 <div className="col-3">
                 <input type="submit"
-                value="Search" className="btn btn-primary w-100"
+                value="Search"
+                 className="btn btn-primary w-100"
                 />
                 </div>
                 </div>
             </form>
             <WeatherInfo data={weatherData}/>
+            <WeatherForecast />
             
                 </div>
     )
