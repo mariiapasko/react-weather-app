@@ -1,17 +1,17 @@
+import React from 'react';
 import Weather from './Weather';
 import './App.css';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <div className="container">
-      <h1>Weather app</h1>
+      
       <Weather  defaultCity="Kiev" />
       <footer>
-        <a href="https://github.com/mariiapasko/react-weather-app"> Open-sourced on GitHub</a> by Mariia Pasko
+        <a href="https://github.com/mariiapasko/react-weather-app" target="_blank"> Open-sourced on GitHub</a> by Mariia Pasko
       </footer>
       </div>
     </div>
   );
 }
-export default App;
