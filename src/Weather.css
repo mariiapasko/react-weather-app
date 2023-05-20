@@ -11,6 +11,8 @@ font-size: 24px;
 font-weight: 100;
 line-height: 29px;
 margin: 20px 0 0 0 ;
+color: black;
+opacity: 0.6;
 }
 
 .Weather ul {
